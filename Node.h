@@ -22,3 +22,7 @@ public:
     }
 
 };
+
+// Deduction guide
+template<typename T>
+Node(const T& data) -> Node<T, void>;

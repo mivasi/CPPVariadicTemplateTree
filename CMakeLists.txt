@@ -7,5 +7,5 @@ project(ClassMembersOnStack VERSION 1.0
 
 add_executable(main main.cpp Node.cpp)
 
-target_compile_features(main PRIVATE cxx_std_14)
+target_compile_features(main PRIVATE cxx_std_17)
 
