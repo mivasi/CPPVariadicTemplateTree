@@ -5,7 +5,9 @@ using std::cout;
 using std::string;
 
 int main() {
-    Node<float> grandChild(3.4);
-    Node<int, Node<float>> child1(10, &grandChild);
-    Node<string, Node<int, Node<float>>> root(string("something"), &child1);
+    Node<float, void> level2(3.4);
+    Node<int, float, void> level1(10, &level2);
+    Node<string, int, float, void> root(string("something"), &level1);
+
+    cout << root.getNext()->getNext()->getData();
 }
